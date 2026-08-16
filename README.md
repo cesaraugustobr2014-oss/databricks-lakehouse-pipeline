@@ -130,8 +130,8 @@ flowchart LR
 
 ```text
 databricks-lakehouse-pipeline/
-├── .github/
-│   └── workflows/ci.yml                   # CI/CD: Pipeline de Lint e Testes Automatizados
+├── ci/
+│   └── ci.yml                             # CI/CD: Pipeline de Testes Automatizados (PyTest)
 ├── docs/
 │   ├── architecture.md                    # Detalhamento profundo de arquitetura e decisões
 │   ├── data_dictionary.md                 # Dicionário completo de tabelas e colunas
