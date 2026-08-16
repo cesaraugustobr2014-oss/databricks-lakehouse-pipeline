@@ -26,7 +26,7 @@
 - [Engenharia de Performance & Otimizações Spark](#-engenharia-de-performance--otimizações-spark)
 - [Estrutura do Repositório](#-estrutura-do-repositório)
 - [Como Executar o Projeto](#-como-executar-o-projeto)
-- [Dicionário de Dados & Guia de Entrevistas](#-documentação-complementar)
+- [Decisões Técnicas de Engenharia (ADRs)](#-documentação-complementar)
 - [Autor](#-autor)
 
 ---
@@ -135,7 +135,7 @@ databricks-lakehouse-pipeline/
 ├── docs/
 │   ├── architecture.md                    # Detalhamento profundo de arquitetura e decisões
 │   ├── data_dictionary.md                 # Dicionário completo de tabelas e colunas
-│   └── interview_guide.md                 # Guia técnico preparatório para entrevistas
+│   └── technical_decisions.md             # Architecture Decision Records (ADRs) e decisões de engenharia
 ├── notebooks/
 │   ├── 01_ingestao_api_mercado.ipynb      # Notebook Databricks: Ingestão Alpha Vantage
 │   ├── 02_arquitetura_medalhao.ipynb      # Notebook Databricks: Pipeline Medalhão Completo
@@ -215,9 +215,9 @@ databricks-lakehouse-pipeline/
 
 ## 📚 Documentação Complementar
 
-- 📘 [**Arquitetura Detalhada & Decisões Técnicas**](docs/architecture.md)
+- 📘 [**Arquitetura Detalhada do Lakehouse**](docs/architecture.md)
+- 📋 [**Decisões Técnicas de Engenharia & ADRs**](docs/technical_decisions.md)
 - 📖 [**Dicionário de Dados Completo**](docs/data_dictionary.md)
-- 🎯 [**Guia de Entrevistas: Como Defender este Projeto**](docs/interview_guide.md)
 
 ---
 
