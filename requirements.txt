@@ -1,0 +1,13 @@
+# Core Big Data & Lakehouse
+pyspark>=3.5.0
+delta-spark>=3.0.0
+
+# Data Manipulation & API Ingestion
+pandas>=2.0.0
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# Quality, Linting & Testing
+pytest>=8.0.0
+flake8>=7.0.0
+black>=24.0.0

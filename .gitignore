@@ -1,0 +1,46 @@
+# Python & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# Delta Lake & Spark runtime artifacts
+metastore_db/
+derby.log
+spark-warehouse/
+.delta/
+*.parquet
+checkpoint/
+_spark_metadata/
+_delta_log/
+
+# Environment Variables & Secrets
+.env
+.env.local
+secrets.json
+
+# IDEs & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local Data files (keep raw large files out of Git)
+data/bronze/
+data/silver/
+data/gold/
+data/sample/
