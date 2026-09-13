@@ -223,7 +223,7 @@ databricks-lakehouse-pipeline/
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **Cesar** como projeto de portfólio para Pós-Graduação em Engenharia de Dados / Databricks.
+Desenvolvido por **Cesar Augusto** como projeto de portfólio para Pós-Graduação em Engenharia de Dados / Databricks.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-blue?style=flat&logo=linkedin)](https://linkedin.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/cesaraugustooliveirarodrigues/)
 [![GitHub](https://img.shields.io/badge/GitHub-Portfólio-darkgreen?style=flat&logo=github)](https://github.com/cesaraugustobr2014-oss)
