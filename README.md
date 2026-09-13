@@ -7,7 +7,7 @@
 [![Apache Spark](https://img.shields.io/badge/Apache_Spark-3.5-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)](https://spark.apache.org)
 [![Delta Lake](https://img.shields.io/badge/Delta_Lake-ACID_Transactions-00ADD8?style=for-the-badge&logo=delta&logoColor=white)](https://delta.io)
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![CI Status](https://img.shields.io/badge/CI-Passing-brightgreen?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com)
+[![Tests](https://img.shields.io/badge/Tests-4%20Passing-brightgreen?style=for-the-badge&logo=pytest&logoColor=white)](tests/)
 
 <br>
 
@@ -167,7 +167,7 @@ databricks-lakehouse-pipeline/
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/SEU_USUARIO/databricks-lakehouse-pipeline.git
+   git clone https://github.com/cesaraugustobr2014-oss/databricks-lakehouse-pipeline.git
    cd databricks-lakehouse-pipeline
    ```
 
@@ -226,4 +226,4 @@ databricks-lakehouse-pipeline/
 Desenvolvido por **Cesar** como projeto de portfólio para Pós-Graduação em Engenharia de Dados / Databricks.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-blue?style=flat&logo=linkedin)](https://linkedin.com)
-[![GitHub](https://img.shields.io/badge/GitHub-Portfólio-darkgreen?style=flat&logo=github)](https://github.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Portfólio-darkgreen?style=flat&logo=github)](https://github.com/cesaraugustobr2014-oss)

@@ -7,7 +7,7 @@ Módulo de Transformação e Qualidade de Dados (Camada Silver)
 """
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
-from pyspark.sql.functions import col, to_date, date_format, regexp_replace
+from pyspark.sql.functions import col, to_date, trunc, regexp_replace
 
 from src.config import (
     EXECUTION_ENV,
@@ -46,14 +46,14 @@ def transform_silver_economia(spark: SparkSession) -> str:
     if "Valor" in df_boi.columns:
         df_boi = df_boi.withColumnRenamed("Valor", "boi_gordo")
 
-    # 2. Padronização de datas para competência mensal (yyyy-MM)
-    # Boi Gordo vem como 'MM/yyyy' -> converte para string 'yyyy-MM'
+    # 2. Padronização de datas para competência mensal canônica (DateType: yyyy-MM-01)
+    # Boi Gordo vem como 'MM/yyyy' -> converte diretamente para DateType
     df_boi_clean = df_boi.withColumn("data", to_date(col("data"), "MM/yyyy"))
-    df_boi_clean = df_boi_clean.withColumn("data", date_format(col("data"), "yyyy-MM"))
 
-    # IPCA vem como 'dd/MM/yyyy' -> converte para string 'yyyy-MM'
-    df_ipca_clean = df_ipca.withColumn("data", to_date(col("data"), "dd/MM/yyyy"))
-    df_ipca_clean = df_ipca_clean.withColumn("data", date_format(col("data"), "yyyy-MM"))
+    # IPCA vem como 'dd/MM/yyyy' -> trunca para o primeiro dia do mês correspondente
+    df_ipca_clean = df_ipca.withColumn(
+        "data", trunc(to_date(col("data"), "dd/MM/yyyy"), "month")
+    )
 
     # 3. Inner Join por competência mensal
     ip = df_ipca_clean.alias("ip")
@@ -66,10 +66,9 @@ def transform_silver_economia(spark: SparkSession) -> str:
         col("ip.data_coleta").alias("data_coleta"),
     )
 
-    # 4. Tipagem estrita: 'yyyy-MM' vira DateType (yyyy-MM-01) e números viram DoubleType
+    # 4. Tipagem estrita: números garantidos como DoubleType
     df_silver = (
-        df_join.withColumn("data", to_date(col("data"), "yyyy-MM"))
-        .withColumn("ipca", regexp_replace(col("ipca").cast("string"), ",", ".").cast("double"))
+        df_join.withColumn("ipca", regexp_replace(col("ipca").cast("string"), ",", ".").cast("double"))
         .withColumn(
             "boi_gordo", regexp_replace(col("boi_gordo").cast("string"), ",", ".").cast("double")
         )
